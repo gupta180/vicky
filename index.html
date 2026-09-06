@@ -1,260 +1,1265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>Freelancer Write PVT. LTD
+ | Work From Home</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+  <meta name="description"
+        content="Work from home handwriting project information. Explore available projects, requirements and application process.">
 
-html,
-body{
-    width:100%;
-    height:100%;
-    font-family:'Poppins',sans-serif;
-    background:linear-gradient(135deg,#0b6eb8,#18c13d);
-}
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body{
-    overflow-x:hidden;
-}
+    :root {
+      --primary: #4f46e5;
+      --primary-dark: #3730a3;
+      --secondary: #7c3aed;
+      --green: #16a34a;
+      --dark: #111827;
+      --gray: #6b7280;
+      --light: #f8fafc;
+      --border: #e5e7eb;
+      --white: #ffffff;
+      --orange: #f97316;
+      --shadow: 0 15px 40px rgba(15, 23, 42, .08);
+    }
 
-/* Full Screen Container */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--dark);
+      background: #fff;
+      line-height: 1.6;
+    }
 
-.sio-main-container{
-    width:100%;
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-/* Full Screen Card */
+    .container {
+      width: min(1120px, 92%);
+      margin: auto;
+    }
 
-.sio-landing-wrap{
-    width:100%;
-    min-height:100vh;
-    background:#fff;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:30px 20px;
-}
+    /* TOP BAR */
+    .topbar {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 9px 15px;
+      font-size: 14px;
+      font-weight: 600;
+    }
 
-/* Pulse Animation */
+    /* NAVBAR */
+    nav {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-@keyframes pulse-blue{
-0%{box-shadow:0 0 0 0 rgba(11,110,184,.7);}
-70%{box-shadow:0 0 0 18px rgba(11,110,184,0);}
-100%{box-shadow:0 0 0 0 rgba(11,110,184,0);}
-}
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-/* Button */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      color: var(--primary);
+      font-size: 20px;
+    }
 
-.sio-btn{
-    width:100%;
-    max-width:350px;
-    background:linear-gradient(45deg,#0b6eb8,#0a8be0);
-    color:#fff;
-    text-decoration:none;
-    padding:16px;
-    font-size:17px;
-    font-weight:700;
-    border-radius:50px;
-    margin:18px 0;
-    animation:pulse-blue 2s infinite;
-    transition:.3s;
-}
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      border-radius: 12px;
+      font-size: 20px;
+    }
 
-.sio-btn:hover{
-    transform:scale(1.05);
-}
+    .nav-btn {
+      background: var(--primary);
+      color: white;
+      padding: 11px 18px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: .2s;
+    }
 
-/* Profile */
+    .nav-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
 
-.sio-profile{
-    margin:20px 0;
-}
+    /* HERO */
+    .hero {
+      padding: 75px 0 65px;
+      background:
+        radial-gradient(circle at 10% 10%, #e0e7ff 0, transparent 35%),
+        radial-gradient(circle at 90% 30%, #ede9fe 0, transparent 35%),
+        #fff;
+      overflow: hidden;
+    }
 
-.sio-avatar{
-    width:120px;
-    height:120px;
-    margin:auto;
-    border-radius:50%;
-    overflow:hidden;
-    border:4px solid #fff;
-    box-shadow:0 8px 20px rgba(0,0,0,.2);
-}
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 55px;
+      align-items: center;
+    }
 
-.sio-avatar img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #eef2ff;
+      color: var(--primary-dark);
+      border: 1px solid #c7d2fe;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
 
-.sio-headline{
-    margin-top:15px;
-    font-size:28px;
-    font-weight:800;
-    color:#18c13d;
-}
+    h1 {
+      font-size: clamp(40px, 6vw, 68px);
+      line-height: 1.02;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+    }
 
-/* Features */
+    .gradient-text {
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
 
-.sio-features{
-    margin-top:20px;
-    width:100%;
-    max-width:450px;
-}
+    .hero p {
+      color: var(--gray);
+      font-size: 18px;
+      max-width: 650px;
+      margin-bottom: 28px;
+    }
 
-.sio-feature{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    margin:12px 0;
-}
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-.sio-tick{
-    width:28px;
-    height:28px;
-    border-radius:50%;
-    background:#eaf7ea;
-    color:#18c13d;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-weight:bold;
-}
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 21px;
+      border-radius: 12px;
+      font-weight: 800;
+      transition: .2s;
+    }
 
-.sio-feature p{
-    color:#333;
-    font-weight:600;
-    font-size:16px;
-}
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      box-shadow: 0 10px 25px rgba(79, 70, 229, .25);
+    }
 
-/* Highlight */
+    .btn-primary:hover {
+      transform: translateY(-2px);
+    }
 
-.sio-highlight{
-    margin-top:20px;
-    background:#eef7ff;
-    color:#0b6eb8;
-    padding:12px;
-    border-radius:10px;
-    font-weight:700;
-}
+    .btn-outline {
+      border: 1px solid var(--border);
+      background: white;
+    }
 
-/* Disclaimer */
+    .btn-outline:hover {
+      background: var(--light);
+    }
 
-.sio-disclaimer{
-    margin-top:25px;
-    font-size:12px;
-    color:#666;
-    line-height:1.6;
-    max-width:450px;
-}
+    .hero-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
 
-/* Mobile */
+    .hero-card:before {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: #ddd6fe;
+      filter: blur(45px);
+      top: -25px;
+      right: -25px;
+      z-index: 0;
+    }
 
-@media(max-width:480px){
+    .book-icon {
+      position: relative;
+      z-index: 1;
+      width: 100px;
+      height: 125px;
+      margin: 10px auto 25px;
+      background: linear-gradient(145deg, #4f46e5, #7c3aed);
+      border-radius: 7px 14px 14px 7px;
+      box-shadow: 10px 10px 0 #ddd6fe;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 43px;
+    }
 
-.sio-headline{
-    font-size:24px;
-}
+    .hero-card h3 {
+      text-align: center;
+      font-size: 23px;
+      margin-bottom: 8px;
+    }
 
-.sio-btn{
-    font-size:15px;
-}
+    .hero-card p {
+      text-align: center;
+      font-size: 14px;
+      margin: 0;
+    }
 
-.sio-feature p{
-    font-size:14px;
-}
+    /* GENERAL */
+    section {
+      padding: 75px 0;
+    }
 
-}
-</style>
+    .section-head {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 45px;
+    }
+
+    .eyebrow {
+      color: var(--primary);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .section-head p {
+      color: var(--gray);
+    }
+
+    /* FEATURES */
+    .features {
+      background: var(--light);
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: #eef2ff;
+      font-size: 23px;
+      margin-bottom: 15px;
+    }
+
+    .feature h3 {
+      margin-bottom: 7px;
+      font-size: 19px;
+    }
+
+    .feature p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    /* PROJECTS */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project {
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 8px 25px rgba(15, 23, 42, .05);
+      transition: .25s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .project-top {
+      padding: 20px;
+      background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+    }
+
+    .project-label {
+      display: inline-block;
+      padding: 5px 9px;
+      background: white;
+      color: var(--primary);
+      border-radius: 7px;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .project h3 {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .project-body {
+      padding: 20px;
+    }
+
+    .project-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 14px;
+    }
+
+    .project-row:last-child {
+      border-bottom: 0;
+    }
+
+    .project-row span:first-child {
+      color: var(--gray);
+    }
+
+    .payout {
+      font-size: 29px;
+      font-weight: 900;
+      color: var(--green);
+      margin: 14px 0;
+    }
+
+    .project-btn {
+      width: 100%;
+      text-align: center;
+      background: var(--dark);
+      color: white;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 700;
+      display: block;
+    }
+
+    /* EARNING */
+    .earning {
+      background: #111827;
+      color: white;
+    }
+
+    .earning .section-head p {
+      color: #cbd5e1;
+    }
+
+    .earning-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .earning-card {
+      background: #1f2937;
+      border: 1px solid #374151;
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .earning-card small {
+      color: #94a3b8;
+      font-weight: 700;
+    }
+
+    .earning-card h3 {
+      font-size: 40px;
+      color: #a5b4fc;
+      margin: 8px 0;
+    }
+
+    .earning-card p {
+      color: #cbd5e1;
+    }
+
+    /* REQUIREMENTS */
+    .requirements {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .requirement {
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 23px 15px;
+    }
+
+    .requirement-icon {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .requirement h3 {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .requirement p {
+      color: var(--gray);
+      font-size: 13px;
+    }
+
+    /* PROCESS */
+    .process {
+      background: var(--light);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      position: relative;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 25px;
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      display: grid;
+      place-items: center;
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .step h3 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      color: var(--gray);
+      font-size: 14px;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 70px 0;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      color: white;
+      border-radius: 28px;
+      padding: 55px 30px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(79, 70, 229, .25);
+    }
+
+    .cta-box h2 {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.1;
+      margin-bottom: 13px;
+    }
+
+    .cta-box p {
+      color: #e0e7ff;
+      max-width: 650px;
+      margin: 0 auto 25px;
+    }
+
+    .telegram-btn {
+      background: #229ed9;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 14px 22px;
+      border-radius: 12px;
+      font-weight: 900;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0b1120;
+      color: #94a3b8;
+      padding: 30px 0;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        max-width: 520px;
+        width: 100%;
+        margin: auto;
+      }
+
+      .feature-grid,
+      .project-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .requirements,
+      .steps {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .nav-inner {
+        min-height: 62px;
+      }
+
+      .logo {
+        font-size: 16px;
+      }
+
+      .logo-icon {
+        width: 36px;
+        height: 36px;
+      }
+
+      .nav-btn {
+        padding: 9px 12px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      h1 {
+        letter-spacing: -1.5px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      section {
+        padding: 55px 0;
+      }
+
+      .feature-grid,
+      .project-grid,
+      .earning-grid,
+      .requirements,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .cta-box {
+        padding: 40px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="sio-main-container">
+  <!-- TOP BAR -->
+  <div class="topbar">
+    ● Registration Open — Limited Seats Available
+  </div>
 
-<div class="sio-landing-wrap">
+  <!-- NAVBAR -->
+  <nav>
+    <div class="container nav-inner">
 
-<a class="sio-btn" href="https://t.me/+E0hwwAIlDI04ODI1" target="_blank">
-🚀 JOIN TELEGRAM CHANNEL
-</a>
+      <a href="#" class="logo">
+        <span class="logo-icon">📚</span>
+        <span>VISHV BOOK PUBLICATION</span>
+      </a>
 
-<div class="sio-profile">
+      <a
+        href="https://t.me/+FWu_-0Ascy45NTNl"
+        target="_blank"
+        class="nav-btn">
+        Join Telegram
+      </a>
 
-<div class="sio-avatar">
-<img src="https://i.ibb.co/KjrBVv9h/mr88-B4-MCQeolto-Xob-M9-JEe-Eyn-ZMn-Bj-FMz-Ac0-SMDAi-h-Ff1-Qg-RBAkl-Xo7yo-Kxe-N-POtqpyfq-Ow-Kv-VPc-Ao-I-I.jpg" alt="Profile">
-</div>
+    </div>
+  </nav>
 
-<div class="sio-headline">
-Work From Home Handwriting Job
-</div>
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container hero-grid">
 
-</div>
+      <div>
+        <span class="badge">
+          ⚡ Work From Home Opportunity
+        </span>
 
-<div class="sio-features">
+        <h1>
+          Work From Home<br>
+          <span class="gradient-text">Handwriting Jobs</span>
+        </h1>
 
-<div class="sio-feature">
-<div class="sio-tick">✓</div>
-<p>Simple Writing Work – No Experience Needed</p>
-</div>
+        <p>
+          Simple copy-writing project information.
+          Work from home at your own pace and explore
+          available project options.
+        </p>
 
-<div class="sio-feature">
-<div class="sio-tick">✓</div>
-<p>Earn ₹15,000 – ₹30,000 Per Month</p>
-</div>
+        <div class="buttons">
 
-<div class="sio-feature">
-<div class="sio-tick">✓</div>
-<p>Work From Home • Flexible Timing</p>
-</div>
+          <a
+            href="#projects"
+            class="btn btn-primary">
+            ✍️ View Projects
+          </a>
 
-<div class="sio-highlight">
-🚀 Limited Seats Available – Apply Today!
-</div>
+          <a
+            href="https://t.me/+FWu_-0Ascy45NTNl"
+            target="_blank"
+            class="btn btn-outline">
+            ✈️ Join Telegram
+          </a>
 
-</div>
+        </div>
+      </div>
 
-<a class="sio-btn" href="https://t.me/+E0hwwAIlDI04ODI1" target="_blank">
-🚀 JOIN TELEGRAM CHANNEL
-</a>
+      <div class="hero-card">
 
-<div class="sio-disclaimer">
-<b style="color:#0a7a3a;">Note:</b><br>
-This is project-based work. Earnings depend on performance and submission quality.
-</div>
+        <div class="book-icon">
+          📖
+        </div>
 
-</div>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2682259648860311');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2682259648860311&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-</div>
+        <h3>
+          Handwriting Copy Work
+        </h3>
+
+        <p>
+          Example project information,
+          requirements and application process.
+        </p>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- FEATURES -->
+  <section class="features">
+
+    <div class="container">
+
+      <div class="section-head">
+        <div class="eyebrow">What You'll Do</div>
+
+        <h2>
+          Simple Handwriting Copy Work
+        </h2>
+
+        <p>
+          Basic handwriting-based project workflow
+          designed for home-based work.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+
+        <div class="feature">
+          <div class="feature-icon">📋</div>
+
+          <h3>Copy Content</h3>
+
+          <p>
+            Copy provided content onto A4 paper
+            according to the project instructions.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">🏡</div>
+
+          <h3>Work From Home</h3>
+
+          <p>
+            Work from your home according to
+            the assigned project schedule.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">📦</div>
+
+          <h3>Project Materials</h3>
+
+          <p>
+            Follow the supplied sample,
+            instructions and project requirements.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">💰</div>
+
+          <h3>Payment Information</h3>
+
+          <p>
+            Review the payment terms and conditions
+            before accepting any project.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">✅</div>
+
+          <h3>Simple Process</h3>
+
+          <p>
+            Follow the steps from registration
+            through submission.
+          </p>
+        </div>
+
+        <div class="feature">
+          <div class="feature-icon">👥</div>
+
+          <h3>Open Application</h3>
+
+          <p>
+            Applicants can review the requirements
+            and decide whether the project suits them.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+
+    <div class="container">
+
+      <div class="section-head">
+        <div class="eyebrow">Choose Your Project</div>
+
+        <h2>
+          Available Projects
+        </h2>
+
+        <p>
+          Example project cards based on the
+          publicly displayed website structure.
+        </p>
+      </div>
+
+      <div class="project-grid">
+
+        <!-- PROJECT 1 -->
+        <div class="project">
+
+          <div class="project-top">
+            <span class="project-label">
+              ★ MOST POPULAR
+            </span>
+
+            <h3>
+              ✍️ 7 Day English Project
+            </h3>
+          </div>
+
+          <div class="project-body">
+
+            <div class="project-row">
+              <span>Pages</span>
+              <strong>100 Pages</strong>
+            </div>
+
+            <div class="project-row">
+              <span>Duration</span>
+              <strong>7 Days</strong>
+            </div>
+
+            <div class="project-row">
+              <span>Work Type</span>
+              <strong>Capital Letters</strong>
+            </div>
+
+            <div class="project-row">
+              <span>Registration</span>
+              <strong>₹499*</strong>
+            </div>
+
+            <div class="payout">
+              ₹25,000*
+            </div>
+
+            <a
+              href="https://t.me/+FWu_-0Ascy45NTNl"
+              target="_blank"
+              class="project-btn">
+              Get Details
+            </a>
+
+          </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project">
+
+          <div class="project-top">
+            <span class="project-label">
+              🔥 HIGH EARNING
+            </span>
+
+            <h3>
+              ✍️ 10 Day English Project
+            </h3>
+          </div>
+
+          <div class="project-body">
+
+            <div class="project-row">
+              <span>Pages</span>
+              <strong>180 Pages</strong>
+            </div>
+
+            <div class="project-row">
+              <span>Duration</span>
+              <strong>10 Days</strong>
+            </div>
+
+            <div class="project-row">
+              <span>Work Type</span>
+              <strong>Capital Letters</strong>
+            </div>
+
+            <div class="project-row">
+              <span>Registration</span>
+              <strong>₹699*</strong>
+            </div>
+
+            <div class="payout">
+              ₹30,000*
+            </div>
+
+            <a
+              href="https://t.me/+FWu_-0Ascy45NTNl"
+              target="_blank"
+              class="project-btn">
+              Get Details
+            </a>
+
+          </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project">
+
+          <div class="project-top">
+            <span class="project-label">
+              💎 MAX EARNING
+            </span>
+
+            <h3>
+              ✍️ 15 Day English Project
+            </h3>
+          </div>
+
+          <div class="project-body">
+
+            <div class="project-row">
+              <span>Pages</span>
+              <strong>240 Pages</strong>
+            </div>
+
+            <div class="project-row">
+              <span>Duration</span>
+              <strong>15 Days</strong>
+            </div>
+
+            <div class="project-row">
+              <span>Work Type</span>
+              <strong>Capital Letters</strong>
+            </div>
+
+            <div class="project-row">
+              <span>Registration</span>
+              <strong>Check Details</strong>
+            </div>
+
+            <div class="payout">
+              ₹45,000*
+            </div>
+
+            <a
+              href="https://t.me/+FWu_-0Ascy45NTNl"
+              target="_blank"
+              class="project-btn">
+              Get Details
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+      <p style="
+        text-align:center;
+        color:#6b7280;
+        font-size:12px;
+        margin-top:20px;
+      ">
+        *Displayed figures are example/advertised project information.
+        Verify all terms independently before making any payment.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- EARNING -->
+  <section class="earning">
+
+    <div class="container">
+
+      <div class="section-head">
+        <div class="eyebrow" style="color:#a5b4fc">
+          Income Information
+        </div>
+
+        <h2>
+          Potential Earnings
+        </h2>
+
+        <p>
+          Any earning figures should be treated as
+          advertised/project estimates until independently verified.
+        </p>
+      </div>
+
+      <div class="earning-grid">
+
+        <div class="earning-card">
+          <small>PART TIME</small>
+
+          <h3>
+            ₹15K–18K
+          </h3>
+
+          <p>
+            Advertised monthly range
+          </p>
+        </div>
+
+        <div class="earning-card">
+          <small>FULL TIME</small>
+
+          <h3>
+            ₹24K–40K
+          </h3>
+
+          <p>
+            Advertised monthly range
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- REQUIREMENTS -->
+  <section>
+
+    <div class="container">
+
+      <div class="section-head">
+        <div class="eyebrow">
+          Who Can Apply
+        </div>
+
+        <h2>
+          Basic Requirements
+        </h2>
+
+        <p>
+          Review the requirements before applying.
+        </p>
+      </div>
+
+      <div class="requirements">
+
+        <div class="requirement">
+          <div class="requirement-icon">🎂</div>
+          <h3>Age</h3>
+          <p>18 years and above</p>
+        </div>
+
+        <div class="requirement">
+          <div class="requirement-icon">🎓</div>
+          <h3>Qualification</h3>
+          <p>12th pass or above</p>
+        </div>
+
+        <div class="requirement">
+          <div class="requirement-icon">🏦</div>
+          <h3>Bank Account</h3>
+          <p>Own bank account</p>
+        </div>
+
+        <div class="requirement">
+          <div class="requirement-icon">✍️</div>
+          <h3>Skill</h3>
+          <p>Basic handwriting ability</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process">
+
+    <div class="container">
+
+      <div class="section-head">
+        <div class="eyebrow">
+          Simple Process
+        </div>
+
+        <h2>
+          How It Works
+        </h2>
+
+        <p>
+          A simple four-step project workflow.
+        </p>
+      </div>
+
+      <div class="steps">
+
+        <div class="step">
+
+          <div class="step-number">1</div>
+
+          <h3>
+            Join Telegram
+          </h3>
+
+          <p>
+            Join the official project communication
+            channel and review the information.
+          </p>
+
+        </div>
+
+        <div class="step">
+
+          <div class="step-number">2</div>
+
+          <h3>
+            Review & Register
+          </h3>
+
+          <p>
+            Read all terms, fees and conditions
+            carefully before registering.
+          </p>
+
+        </div>
+
+        <div class="step">
+
+          <div class="step-number">3</div>
+
+          <h3>
+            Receive Materials
+          </h3>
+
+          <p>
+            Follow the project instructions and
+            complete the assigned work.
+          </p>
+
+        </div>
+
+        <div class="step">
+
+          <div class="step-number">4</div>
+
+          <h3>
+            Submit Work
+          </h3>
+
+          <p>
+            Submit completed work according to
+            the agreed project terms.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <div class="container">
+
+      <div class="cta-box">
+
+        <h2>
+          Explore Work From Home Projects
+        </h2>
+
+        <p>
+          Review project details, requirements and
+          terms carefully before applying.
+        </p>
+
+        <a
+          href="https://t.me/+FWu_-0Ascy45NTNl"
+          target="_blank"
+          class="https://t.me/+FWu_-0Ascy45NTNl">
+          ✈️ Join Telegram
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="container">
+
+      <p>
+        © <span id="year"></span>
+        <strong>Vishv Book Publication</strong>.
+        All rights reserved.
+      </p>
+
+      <p style="margin-top:7px;">
+        This website is a demo/template implementation.
+      </p>
+
+    </div>
+
+  </footer>
+
+  <script>
+    // Current year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+      link.addEventListener("click", function(e) {
+
+        const target = document.querySelector(
+          this.getAttribute("href")
+        );
+
+        if (target) {
+          e.preventDefault();
+
+          target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+        }
+
+      });
+
+    });
+  </script>
 
 </body>
 </html>
